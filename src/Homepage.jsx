@@ -162,7 +162,7 @@ function Homepage() {
     });
   };
   return (
-    <div className="w-screen r flex flex-col sm md xl 2xl  items-center bg-gradient-to-b to-gray-200 from-gray-800">
+    <div className="w-auto sm:w-auto r flex flex-col   items-center bg-gradient-to-b to-gray-200 from-gray-800">
       <header className=" fixed ">
         <div className="  h-32 w-screen items-center  border-b-yellow-600 border-b-[0.4px] flex justify-between ">
           <div className="flex items-center gap-10px ">
@@ -178,7 +178,7 @@ function Homepage() {
           </h1>
           <button
             onClick={userSignOut}
-            className="  mr-10 transition ease-in-out delay-150 bg-gray-800 hover:-translate-y-1 hover:scale-110  duration-300 h-[48px] w-[200px]  text-teal-50 font-bold rounded hover:bg-gray-500 hover:border hover:text-white mt-0"
+            className="hover:border  mr-10   bg-gray-800    h-[48px] w-[200px]  text-teal-50 font-bold rounded  hover:text-white mt-0"
           >
             <p>Log out</p>
           </button>
@@ -197,7 +197,7 @@ function Homepage() {
         </form>
       </section>
       <main className="backdrop-blur-md bg-white/30 flex flex-col gap-8 mt-[300px] sm:grid-cols-2">
-        <div className="grid  xl 2xl grid-cols-4 justify-between items-center gap-10 w-screen p-10">
+        <div className="grid ms: md:grid-cols-2   lg:grid-cols-4 justify-between items-center gap-10 w-screen p-10">
           <DndContext collisionDetection={closestCenter} onDragEnd={onDragEnd}>
             <SortableContext items={images} strategy={rectSwappingStrategy}>
               {images.map((item) => (
